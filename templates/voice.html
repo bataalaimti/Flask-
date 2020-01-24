@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+bade | Voice
+{% endblock title %}
+{% block content %}
+<form class="form-inline" method="POST">
+    <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control" placeholder="Үг оруулна уу" name="word">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">хувиргах</button>
+</form>
+<audio id="voice" controls>
+    <source src="{{url_for('static', filename='voice/hello.mp3')}}" type="audio/mpeg">
+</audio>
+<img src="{{url_for('static', filename='voice/hello.jpg')}}" alt="">
+{% endblock content %}

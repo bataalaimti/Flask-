@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+bade | Тоглоом
+{% endblock title %}
+{% block content %}
+<div class="container">
+    <form class="form-inline" method="POST">
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="inputPassword2"
+                   placeholder="хайч, чулуу, даавуу 3-аас нэгийг сонгоно уу" name="game">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Тоглох</button>
+    </form>
+    <img src="{{url_for('static', filename='images/image.jpg')}}" alt="">
+    {{game_result}}
+    {% endblock content %}
+</div>
